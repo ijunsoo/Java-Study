@@ -3,6 +3,7 @@ package beat_game;
 import javax.swing.*;
 import java.awt.*;
 
+
 public class DynamicBeat extends JFrame {
     private Image Screen_Image;
     private Graphics Screen_Graphics;
@@ -15,7 +16,10 @@ public class DynamicBeat extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         introBackground= new ImageIcon(Main.class.getResource("images/introBackground.jpg")).getImage();
+        Music introMusic =new Music("gameMusic.mp3",true);
+        introMusic.start();
     }
+
     public void paint(Graphics g){
         Screen_Image=createImage(Main.SCREEN_WIDTH,Main.SCREEN_HEIGHT);
         Screen_Graphics=Screen_Image.getGraphics();
