@@ -7,7 +7,8 @@ import java.awt.*;
 public class DynamicBeat extends JFrame {
     private Image Screen_Image;
     private Graphics Screen_Graphics;
-    private Image introBackground;
+    private Image introBackground= new ImageIcon(Main.class.getResource("images/introBackground.jpg")).getImage();;
+
     public DynamicBeat(){
         setTitle("BeatGame");
         setSize(Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
@@ -15,7 +16,7 @@ public class DynamicBeat extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-        introBackground= new ImageIcon(Main.class.getResource("images/introBackground.jpg")).getImage();
+
         Music introMusic =new Music("gameMusic.mp3",true);
         introMusic.start();
     }
